@@ -12,13 +12,13 @@ class OwnershipsController < ApplicationController
     if @item.new_record?
       begin
         # TODO 商品情報の取得 Amazon::Ecs.item_lookupを用いてください
-        response = {}
+        response = Amazon::Ecs.item_lookup(ARGV[0], { response_group: 'Large' })
       rescue Amazon::RequestError => e
         return render :js => "alert('#{e.message}')"
       end
 
       amazon_item       = response.items.first
-      @item.title        = amazon_item.get('ItemAttributes/Title')
+      @item.title        = amazon_item.get("ItemAttributes/Title")
       @item.small_image  = amazon_item.get("SmallImage/URL")
       @item.medium_image = amazon_item.get("MediumImage/URL")
       @item.large_image  = amazon_item.get("LargeImage/URL")
