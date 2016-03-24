@@ -8,5 +8,5 @@ class Item < ActiveRecord::Base
   has_many :want_users, through: :wants, source: :user
   has_many :haves, class_name:"Have", foreign_key: "item_id", dependent: :destroy
   has_many :have_users, through: :wants, source: :user
-  
+
 end
