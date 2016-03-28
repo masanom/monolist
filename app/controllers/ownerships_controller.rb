@@ -10,6 +10,7 @@ class OwnershipsController < ApplicationController
 
     # itemsテーブルに存在しない場合はAmazonのデータを登録する。
     if @item.new_record?
+      
       begin
         # TODO 商品情報の取得 Amazon::Ecs.item_lookupを用いてください
         response = Amazon::Ecs.item_lookup(@item.asin,
@@ -27,11 +28,13 @@ class OwnershipsController < ApplicationController
       @item.detail_page_url = amazon_item.get("DetailPageURL")
       @item.raw_info        = amazon_item.get_hash
       @item.save!
+      binding.pry
     end
 
     # TODO ユーザにwant or haveを設定する
     # params[:type]の値にHaveボタンが押された時には「Have」,
     # Wantボタンが押された時には「Want」が設定されています。
+    current_user.want(@item) if params[:type] == "Want"
     current_user.have(@item) if params[:type] == "Have"
     
 
