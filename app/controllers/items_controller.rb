@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+   # @users = @item.have_users
   end
 
   private

@@ -23,6 +23,7 @@
         <h4 class="side-box-title">Haveしたユーザー</h4>
         <div class="side-box-body">
           <% # TODO Haveしたユーザー一覧 %>
+          <%= @item.have_users %>
           <a href="/users/2">
               <span class="gravatar"><img alt="suzuki" class="gravatar" src="https://secure.gravatar.com/avatar/aa99b351245441b8ca95d54a52d2998c?s=24&amp;d=mm"></span>
           </a>
@@ -45,3 +46,8 @@
     </div>
   </div>
 </div>
+
+<% content_for :head do %>
+  <title><%= @item.title %>- monolist</title>
+  <meta name="description" content="<%= @item.title %>に関する情報です。この商品を欲しい人、持ってる人を表示しています。" />
+<% end %>
