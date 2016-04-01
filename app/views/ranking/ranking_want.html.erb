@@ -17,7 +17,11 @@
         </div>
         <div class="image">
           <div class="img-wrap">
+            <% if item.large_image.present? %>
               <%= link_to image_tag(item.large_image, alt: item.title), item_url(id: item.id) %>
+            <% else %>
+              <%= image_tag("no-image.png" , alt: item.title) %>
+            <% end %>
           </div>
         </div>
         <div class="detail">
