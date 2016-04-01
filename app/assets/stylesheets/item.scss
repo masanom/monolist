@@ -164,3 +164,72 @@
     }
   }
 }
+
+
+
+
+.ranking-item-box {
+  width: 220px;
+  margin: 10px;
+  float: left;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  position: relative;
+  .image {
+    width: 220px;
+    height: 270px;
+    display: table;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    .img-wrap {
+      width: 220px;
+      height: 270px;
+      padding: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        max-height: 270px;
+      }
+    }
+  }
+  .detail {
+    height: 70px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    background: #fafafa;
+    font-size: 13px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    .title {
+      margin: 0;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+  .rank {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    background: #fafafa;
+    font-size: 13px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    .title {
+      margin: 0;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      text-align:center;
+      text-weight: bold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+}

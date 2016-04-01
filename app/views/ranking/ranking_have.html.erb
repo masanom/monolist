@@ -5,6 +5,7 @@
     </div>
   </div>
 </div>
-<%= @ranking_have_items %>
+<%#= (@ranking_have_items) %>
 
+<%= link_to image_tag(@ranking_have_items.first.large_image, alt: @ranking_have_items.first.title), item_url(id: @ranking_have_items.first.id) %>
 
