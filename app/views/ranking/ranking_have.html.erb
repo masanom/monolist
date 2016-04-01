@@ -5,7 +5,28 @@
     </div>
   </div>
 </div>
-<%#= (@ranking_have_items) %>
 
-<%= link_to image_tag(@ranking_have_items.first.large_image, alt: @ranking_have_items.first.title), item_url(id: @ranking_have_items.first.id) %>
-
+<div class="container">
+  <div class="container-inner inner-default clearfix">
+    <% @ranking_have_items.each_with_index do |item,i| %>
+    <div class="ranking-item-box">
+        <div class="rank">
+          <p class="title">
+            <%= "第#{(i + 1)}位" %>
+          </p>
+        </div>
+        <div class="image">
+          <div class="img-wrap">
+              <%= link_to image_tag(item.large_image, alt: item.title), item_url(id: item.id) %>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="title">
+            <%= item.title %>
+          </p>
+        </div>
+      </div>
+      <% end %>
+    
+  </div>
+</div>
