@@ -5,253 +5,28 @@
     </div>
   </div>
 </div>
-<%= @ranking_have_items %>
-<%= Want.inspect %>
 
 <div class="container">
   <div class="container-inner inner-default clearfix">
-      <div class="ranking-item-box">
+    <% @ranking_want_items.each_with_index do |item,i| %>
+    <div class="ranking-item-box">
         <div class="rank">
           <p class="title">
-            第1位
+            <%= "第#{(i + 1)}位" %>
           </p>
         </div>
         <div class="image">
           <div class="img-wrap">
-              <img alt="お客様がずっと通いたくなる小さなサロンのつくり方-エステ・アロマ・ネイルの癒しサロンをはじめよう- (DO BOOKS)" src="http://ecx.images-amazon.com/images/I/41RO77y%2BxtL.jpg">
+              <%= link_to image_tag(item.large_image, alt: item.title), item_url(id: item.id) %>
           </div>
         </div>
         <div class="detail">
           <p class="title">
-            お客様がずっと通いたくなる小さなサロンのつくり方-エステ・アロマ・ネイルの癒しサロンをはじめよう- (DO BOOKS)
+            <%= item.title %>
           </p>
-        </div>
-        <div class="action">
-          <a class="want-20 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=20&amp;type=Want"></a>
-      
-          <a class="have-20 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=20&amp;type=Have"></a>
-      
-          <a class="btn btn-info btn-sm" href="/items/20">詳細</a>
         </div>
       </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="少女終末旅行 2 (BUNCH COMICS)" src="http://ecx.images-amazon.com/images/I/617kVq571ZL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            少女終末旅行 2 (BUNCH COMICS)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-22 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=22&amp;type=Want"></a>
-
-    <a class="have-22 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=22&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/22">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="青春１８きっぷで楽しむおとなの鉄道旅行 (だいわ文庫)" src="http://ecx.images-amazon.com/images/I/61lPVpQxrAL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            青春１８きっぷで楽しむおとなの鉄道旅行 (だいわ文庫)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-24 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=24&amp;type=Want"></a>
-
-    <a class="have-24 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=24&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/24">詳細</a>
-    </div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="進撃の巨人（１６）" src="http://ecx.images-amazon.com/images/I/51fz0Q713cL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            進撃の巨人（１６）
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-25 btn-want btn btn-danger btn-sm wanted" data-remote="true" rel="nofollow" data-method="delete" href="/ownerships/1789?item_id=25&amp;type=Want"></a>
-
-    <a class="have-25 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=25&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/25">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="進撃の巨人（１５）" src="http://ecx.images-amazon.com/images/I/511pkjktdpL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            進撃の巨人（１５）
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-26 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=26&amp;type=Want"></a>
-
-    <a class="have-26 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=26&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/26">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="DRAGON BALL STARTER BOOK 1 (ジャンプコミックスDIGITAL)" src="http://ecx.images-amazon.com/images/I/61hh7%2Be3U-L.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            DRAGON BALL STARTER BOOK 1 (ジャンプコミックスDIGITAL)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-27 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=27&amp;type=Want"></a>
-
-    <a class="have-27 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=27&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/27">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="DRAGON BALL STARTER BOOK 2 (ジャンプコミックスDIGITAL)" src="http://ecx.images-amazon.com/images/I/51V5rYcSG4L.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            DRAGON BALL STARTER BOOK 2 (ジャンプコミックスDIGITAL)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-28 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=28&amp;type=Want"></a>
-
-    <a class="have-28 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=28&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/28">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="ゆれる (ポプラ文庫)" src="http://ecx.images-amazon.com/images/I/51NciwzEGsL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            ゆれる (ポプラ文庫)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-29 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=29&amp;type=Want"></a>
-
-    <a class="have-29 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=29&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/29">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="ゆれる (文春文庫)" src="http://ecx.images-amazon.com/images/I/51GxXYYCEzL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            ゆれる (文春文庫)
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-30 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=30&amp;type=Want"></a>
-
-    <a class="have-30 btn-have btn btn-warning btn-sm haved" data-remote="true" rel="nofollow" data-method="delete" href="/ownerships/1536?item_id=30&amp;type=Have"></a> 
-
-    <a class="btn btn-info btn-sm" href="/items/30">詳細</a>
-</div>
-      </div>
-      <div class="ranking-item-box">
-        <div class="rank">
-          <p class="title">
-            第1位
-          </p>
-        </div>
-        <div class="image">
-          <div class="img-wrap">
-              <img alt="ひと目でわかる　ゴルフ　飛ばしのスイッチ" src="http://ecx.images-amazon.com/images/I/51pTvqGWjdL.jpg">
-          </div>
-        </div>
-        <div class="detail">
-          <p class="title">
-            ひと目でわかる　ゴルフ　飛ばしのスイッチ
-          </p>
-        </div>
-        <div class="action">
-    <a class="want-31 btn-want btn btn-danger btn-sm want" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=31&amp;type=Want"></a>
-
-    <a class="have-31 btn-have btn btn-warning btn-sm have" data-remote="true" rel="nofollow" data-method="post" href="/ownerships?item_id=31&amp;type=Have"></a>
-
-    <a class="btn btn-info btn-sm" href="/items/31">詳細</a>
-</div>
-      </div>
-      
-      </div>
-      </div>
+      <% end %>
+    
   </div>
 </div>
